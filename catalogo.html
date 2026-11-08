@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo exclusivo de insumos profesionales para uñas, esmaltes UV, aceites hidratantes y herramientas en Nail's By.">
+  <title>Catálogo de Productos para Uñas · Nail's By</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Enlace accesible de salto al contenido principal (WCAG 2.4.1) -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Región para notificaciones Toast accesibles (WCAG 4.1.3) -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Cabecera principal del sitio web -->
+  <header role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="Nail's By - Ir a página de inicio">
+        <span>💅 Nail's By</span>
+      </a>
+
+      <!-- Menú de navegación principal entre páginas -->
+      <nav aria-label="Navegación principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="reservas.html" class="nav-link">Reservas</a></li>
+          <li><a href="catalogo.html" class="nav-link active" aria-current="page">Catálogo</a></li>
+          <li><a href="citas.html" class="nav-link">Mis Citas / Agenda</a></li>
+        </ul>
+      </nav>
+
+      <div id="who">
+        <!-- Renderizado dinámico de estado de sesión y carrito -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor del contenido principal semántico -->
+  <main id="contenido-principal" role="main">
+    <section aria-labelledby="catalogo-heading">
+      <h1 id="catalogo-heading">Catálogo de Productos y Cuidado de Uñas</h1>
+      <p class="lead">
+        Selecciona insumos profesionales para mantener tus uñas impecables en casa o abastecer tu salón. Puedes agregarlos a tu carrito o consultar referencias en Amazon.
+      </p>
+
+      <!-- Contenedor interactivo gestionado por app.js -->
+      <div id="catalog-view-container">
+        <noscript>
+          <div class="card">
+            <h2>Catálogo en mantenimiento</h2>
+            <p>Por favor activa JavaScript en tu navegador para interactuar con el carrito de compras y los filtros dinámicos del catálogo.</p>
+          </div>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página accesible -->
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <p>
+        <strong>Nail's By</strong> &copy; 2026 · Salón de Belleza y Manicura Profesional.<br>
+        Envíos a domicilio y retiro en tienda física · Horario: Lunes a Sábado de 09:00 a 18:00.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

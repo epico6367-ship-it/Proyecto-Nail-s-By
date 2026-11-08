@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agenda tu cita de uñas en línea en Nail's By. Selecciona el servicio, tu manicurista preferida, fecha en calendario y hora.">
+  <title>Reservar Cita · Nail's By Manicura y Belleza</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Enlace accesible de salto al contenido principal (WCAG 2.4.1) -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Región para notificaciones Toast accesibles (WCAG 4.1.3) -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Cabecera principal del sitio web -->
+  <header role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="Nail's By - Ir a página de inicio">
+        <span>💅 Nail's By</span>
+      </a>
+
+      <!-- Menú de navegación principal entre páginas -->
+      <nav aria-label="Navegación principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="reservas.html" class="nav-link active" aria-current="page">Reservas</a></li>
+          <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+          <li><a href="citas.html" class="nav-link">Mis Citas / Agenda</a></li>
+        </ul>
+      </nav>
+
+      <div id="who">
+        <!-- Renderizado dinámico de estado de sesión y carrito -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor del contenido principal semántico -->
+  <main id="contenido-principal" role="main">
+    <section aria-labelledby="reservas-heading">
+      <h1 id="reservas-heading">Agendamiento de Citas en Línea</h1>
+      <p class="lead">
+        Completa los pasos a continuación para asegurar tu turno en Nail's By. Los horarios se actualizan en tiempo real según la disponibilidad de nuestras manicuristas.
+      </p>
+
+      <!-- Contenedor dinámico interactivo inyectado y gestionado por app.js -->
+      <div id="booking-view-container">
+        <!-- Contenido base accesible en caso de carga inicial o desactivación de script -->
+        <noscript>
+          <div class="card">
+            <h2>Atención telefónica disponible</h2>
+            <p>Para agendar tu cita de uñas sin JavaScript habilitado, por favor comunícate a nuestro WhatsApp oficial: <strong>0991234567</strong>.</p>
+          </div>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página accesible -->
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <p>
+        <strong>Nail's By</strong> &copy; 2026 · Salón de Belleza y Manicura Profesional.<br>
+        Todos los derechos reservados · Horario de atención: Lunes a Sábado de 09:00 a 18:00 (Domingos cerrado).
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nail's By - Salón de belleza profesional, cuidado de uñas, reservas en línea y catálogo de insumos de manicure.">
+  <title>Nail's By · Salón de Belleza y Manicura Profesional</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Enlace accesible de salto al contenido principal (WCAG 2.4.1) -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Región para notificaciones Toast accesibles (WCAG 4.1.3) -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Cabecera principal del sitio web -->
+  <header role="banner">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="Nail's By - Ir a página de inicio">
+        <span>💅 Nail's By</span>
+      </a>
+
+      <!-- Menú de navegación principal entre páginas -->
+      <nav aria-label="Navegación principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+          <li><a href="reservas.html" class="nav-link">Reservas</a></li>
+          <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+          <li><a href="citas.html" class="nav-link">Mis Citas / Agenda</a></li>
+        </ul>
+      </nav>
+
+      <div id="who">
+        <!-- Renderizado dinámico de estado de sesión y carrito -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor del contenido principal semántico -->
+  <main id="contenido-principal" role="main">
+    <!-- Sección de Bienvenida (Hero) -->
+    <section class="hero-card" aria-labelledby="hero-title">
+      <h1 id="hero-title">Realza la Belleza de tus Manos en Nail's By</h1>
+      <p class="lead">
+        Especialistas en manicure semipermanente, esculpido acrílico, nail art personalizado y tratamientos spa relajantes.
+      </p>
+      <div class="hero-actions">
+        <a href="reservas.html" class="nav-link" style="background-color:var(--ac); color:#ffffff; font-size:1.05rem; padding:12px 24px; border-radius:12px;">
+          📅 Agendar Cita en Línea
+        </a>
+        <a href="catalogo.html" class="nav-link" style="background-color:var(--ac2); color:var(--ac); font-size:1.05rem; padding:12px 24px; border-radius:12px;">
+          🛍️ Explorar Tienda de Productos
+        </a>
+      </div>
+    </section>
+
+    <!-- Sección de Servicios Destacados -->
+    <section class="card" aria-labelledby="servicios-destacados-title">
+      <h2 id="servicios-destacados-title">Nuestros Servicios de Manicura y Belleza</h2>
+      <p class="mu">Cada procedimiento es ejecutado por manicuristas certificadas con instrumental médico esterilizado.</p>
+      
+      <div class="grid" role="list" aria-label="Lista de servicios ofrecidos">
+        <article class="opt" role="listitem">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=500&q=80" alt="Manos con esmaltado tradicional limpio y brillante" class="service-img" loading="lazy">
+          <div class="opt-content">
+            <b>Manicure Clásico</b>
+            <small>45 min · $8.00</small>
+            <p class="mu" style="margin-top:6px; font-size:0.82rem;">Limpieza profunda, exfoliación suave y esmaltado clásico.</p>
+          </div>
+        </article>
+
+        <article class="opt" role="listitem">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Uñas decoradas con esmaltado semipermanente en lámpara LED" class="service-img" loading="lazy">
+          <div class="opt-content">
+            <b>Semipermanente</b>
+            <small>60 min · $15.00</small>
+            <p class="mu" style="margin-top:6px; font-size:0.82rem;">Esmaltado en gel con curado UV de hasta 21 días de duración.</p>
+          </div>
+        </article>
+
+        <article class="opt" role="listitem">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=500&q=80" alt="Uñas acrílicas esculpidas con acabado almendrado" class="service-img" loading="lazy">
+          <div class="opt-content">
+            <b>Uñas Acrílicas</b>
+            <small>120 min · $35.00</small>
+            <p class="mu" style="margin-top:6px; font-size:0.82rem;">Estructura con tips o molde, resistencia y nail art premium.</p>
+          </div>
+        </article>
+
+        <article class="opt" role="listitem">
+          <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=500&q=80" alt="Sesión de spa de pies con sales exfoliantes e hidratación" class="service-img" loading="lazy">
+          <div class="opt-content">
+            <b>Pedicure SPA</b>
+            <small>75 min · $20.00</small>
+            <p class="mu" style="margin-top:6px; font-size:0.82rem;">Exfoliación hidratante, retiro de callosidades y masaje relajante.</p>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <a href="reservas.html" class="nav-link" style="background-color:var(--ac); color:#ffffff; display:inline-block;">
+          Ver Todos los Horarios y Agendar Cita
+        </a>
+      </div>
+    </section>
+
+    <!-- Tabla Semántica de Precios y Duración (Cumple WCAG 1.3.1 con <th> y <caption>) -->
+    <section class="card" aria-labelledby="tarifario-title">
+      <h2 id="tarifario-title">Tarifario Transparente y Duración Estimada</h2>
+      <p class="mu">Planifica tu visita conociendo el tiempo de dedicación y el valor de cada servicio.</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <caption>Cuadro oficial de tarifas y tiempos de atención del salón</caption>
+          <thead>
+            <tr>
+              <th scope="col">Servicio</th>
+              <th scope="col">Duración (min)</th>
+              <th scope="col">Precio Total</th>
+              <th scope="col">Abono Inicial (30%)</th>
+              <th scope="col">Garantía</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Manicure clásico</td>
+              <td>45 minutos</td>
+              <td>$8.00</td>
+              <td>$2.40</td>
+              <td>3 días</td>
+            </tr>
+            <tr>
+              <td>Semipermanente</td>
+              <td>60 minutos</td>
+              <td>$15.00</td>
+              <td>$4.50</td>
+              <td>15 días</td>
+            </tr>
+            <tr>
+              <td>Uñas acrílicas</td>
+              <td>120 minutos</td>
+              <td>$35.00</td>
+              <td>$10.50</td>
+              <td>21 días</td>
+            </tr>
+            <tr>
+              <td>Pedicure spa</td>
+              <td>75 minutos</td>
+              <td>$20.00</td>
+              <td>$6.00</td>
+              <td>Inmediata</td>
+            </tr>
+            <tr>
+              <td>Retiro + diseño</td>
+              <td>30 minutos</td>
+              <td>$10.00</td>
+              <td>$3.00</td>
+              <td>Inmediata</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sección de Garantías y Beneficios -->
+    <section class="card" aria-labelledby="garantias-title">
+      <h2 id="garantias-title">¿Por qué confiar tu cuidado en Nail's By?</h2>
+      <div class="grid" role="list">
+        <div class="stat-item" role="listitem">
+          <b>100%</b>
+          <span>Esterilización médica de instrumental en calor seco.</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <b>0 min</b>
+          <span>Cero tiempo de espera al agendar mediante reserva previa.</span>
+        </div>
+        <div class="stat-item" role="listitem">
+          <b>Top</b>
+          <span>Insumos originales libres de parabenos y crueldad animal.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página accesible -->
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <p>
+        <strong>Nail's By</strong> &copy; 2026 · Salón de Belleza y Manicura Profesional.<br>
+        Todos los derechos reservados · Horario de atención: Lunes a Sábado de 09:00 a 18:00.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
